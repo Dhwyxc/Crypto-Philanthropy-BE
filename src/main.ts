@@ -33,7 +33,7 @@ async function bootstrap() {
   app.use(
     cookieSession({
       name: configService.get('COOKIE_NAME'),
-      keys: ['dffdfdfdf', 'dsdss'],
+      keys: ['eddđ', 'dsdxxxxxxxss'],
       sameSite: 'lax',
       httpOnly: true,
     }),

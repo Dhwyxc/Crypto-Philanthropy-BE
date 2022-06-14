@@ -8,6 +8,8 @@ import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
+import { CharityModule } from './charity/charity.module';
+import { ProjectModule } from './project/project.module';
 
 @Module({
   imports: [
@@ -51,9 +53,13 @@ import { AuthModule } from './auth/auth.module';
 
     // UsersModule,
     AuthModule,
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'distClient'),
-    }),
+
+    CharityModule,
+
+    ProjectModule,
+    // ServeStaticModule.forRoot({
+    //   rootPath: join(__dirname, '..', 'distClient'),
+    // }),
   ],
   controllers: [AppController],
   providers: [AppService],
