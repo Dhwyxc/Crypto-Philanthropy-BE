@@ -15,6 +15,9 @@ export class Project extends Document {
 
   @Prop()
   logo?: string;
+   
+  @Prop()
+  target: number;
 
   @Prop({ type: MongooseSchema.Types.Mixed })
   // eslint-disable-next-line @typescript-eslint/ban-types
